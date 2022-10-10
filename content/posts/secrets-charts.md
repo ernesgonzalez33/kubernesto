@@ -14,7 +14,7 @@ So what is GitOps? And why is this even a problem in the first place?
 
 [Red Hat](https://www.redhat.com/en/topics/devops/what-is-gitops#what-is-gitops) defines GitOps as a methodology that "uses Git repositories as a single source of truth to deliver infrastructure as code. Submitted code checks the CI process, while the CD process checks and applies requirements for things like security, infrastructure as code, or any other boundaries set for the application framework. All code changes are tracked, making updates easy while also providing version control should a rollback be needed."
 
-The most important part of that definition is the one that says that the Git repository is the single source of truth. So everything related to the application you want to develop and deploy needs to be in that Git repository. And you will ask: "Does that include secrets?", and I will answer: "Maybe". There are two ways: 
+The most important part of that definition is the one that says that the Git repository is the **single source of truth**. So everything related to the application you want to develop and deploy needs to be in that Git repository. And you will ask: "Does that include secrets?", and I will answer: "Maybe". There are two ways: 
 
 1. You can store the secrets encrypted in the Git repo.
 2. You can create references to the secrets and with some automation create the Kubernetes Secret.
@@ -71,7 +71,7 @@ First, you will need to install kubeseal on your machine following these instruc
 * [Linux](https://github.com/bitnami-labs/sealed-secrets#linux)
 * [From Source](https://github.com/bitnami-labs/sealed-secrets#installation-from-source)
 
-Then, run the following command: 
+Then, you will need to encrypt your secrets, and I'm not meaning the entire K8s secret, but only the words/passwords you need encrypted. For that, run the following command:
 
 ```bash
 echo -n <my-secret> | kubeseal --controller-name=sealed-secrets --controller-namespace=sealed-secrets --raw --from-file=/dev/stdin --scope=namespace-wide
