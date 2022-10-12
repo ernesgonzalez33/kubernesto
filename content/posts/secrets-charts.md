@@ -89,6 +89,8 @@ Run the following command:
 helm install hello-secret ./chart/hello-secret/
 ```
 
+Follow the instructions from the `NOTES.txt` that will appear as an output of the previous command to test your application. You should see a message that says "Hello" and your secret in plain text.
+
 ## Conclusion
 
 Secrets management in GitOps is not an easy task, and every way of doing it has some advantages and disadvantages. With this blog, we only wanted to teach how to do it using Helm Charts and letting your installers encrypt the secrets directly in the `Values` file. It might not be the most secure way, but it is one of the most GitOps-y ones.
