@@ -23,11 +23,11 @@ For this article, we are going to cover the first methodology. And to be more sp
 
 ## Helm Charts and Sealed Secrets
 
-If you are not familiar with Helm Charts, I invite you to read more [here](https://helm.sh/docs/topics/charts/). 
+If you are not familiar with Helm Charts, I invite you to read their [documentation](https://helm.sh/docs/topics/charts/), which has a lot of insights and explanations on how to use them.
 
-And to know more about Sealed Secrets, follow this [link](https://github.com/bitnami-labs/sealed-secrets).
+And Sealed Secrets is a tool created by Bitnami Labs that lets you encrypt the secrets before sending them to the cluster. You will find a lot of information about it in their [documentation](https://github.com/bitnami-labs/sealed-secrets).
 
-Usually, the way to handle sensitive information with Sealed Secrets is to create a Kubernetes `Secret` and encrypt it using `kubeseal` so it creates a `SealedSecret`. Then, you have to create that `SealedSecret` in the OpenShift cluster and the Sealed Secrets controller will decrypt it and create a K8s `Secret` with the information from the `SealedSecret`. A more detailed procedure can be found [here](https://github.com/bitnami-labs/sealed-secrets#usage).
+Usually, the way to handle sensitive information with Sealed Secrets is to create a Kubernetes `Secret` and encrypt it using `kubeseal` so it creates a `SealedSecret`. Then, you have to create that `SealedSecret` in the OpenShift cluster and the Sealed Secrets controller will decrypt it and create a K8s `Secret` with the information from the `SealedSecret`. A more detailed procedure can be found in their [usage](https://github.com/bitnami-labs/sealed-secrets#usage) section of their documentation.
 
 But the idea of this blog is to give the option of encrypting the secret directly in a Helm `Values` file. So we can't create the Sealed Secret that way, we will need to use the `raw` mode and paste the secret directly into the file. For that we will need to do the following:
 
