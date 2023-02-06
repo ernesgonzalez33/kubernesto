@@ -1,6 +1,6 @@
 +++ 
 author = "Ernesto González" 
-title = "How to use set up a Free Todoist account with GTD" 
+title = "How to set up a Free Todoist account with GTD" 
 date = "2023-02-06" 
 description = "Using GTD with Todoist Free account is not as easy as just doing it. In this article I will give some tips for this to work" 
 tags = [ "GTD", "Getting Things Done", "Todoist"] 
