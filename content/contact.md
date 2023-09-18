@@ -3,4 +3,4 @@ title = "Contact"
 slug = "contact"
 +++
 
-Follow me on Twitter: [@pangan33](https://twitter.com/pangan33) or send me an email at ernesgonzalez.33.egc@icloud.com.
+Connect with me on [LinkedIn](https://www.linkedin.com/in/ernesgonzalez/) or send me an email at ernesto.gonzalez33@icloud.com.
